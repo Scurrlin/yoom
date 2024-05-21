@@ -18,8 +18,12 @@ A professional-grade Zoom clone for all your video conferencing needs!
 
 ## Image Gallery
 ![Home](https://i.imgur.com/2SU0RsM.png)<br>
+---
 ![Sign-In](https://i.imgur.com/CbLyGrL.png)<br>
+---
 ![Schedule](https://i.imgur.com/1YW1NDu.png)<br>
+---
 ![Setup](https://i.imgur.com/34VNsMm.png)<br>
+---
 ![Call](https://i.imgur.com/kwpT1ZY.png)<br>
 ---
