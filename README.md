@@ -17,8 +17,9 @@ A professional-grade Zoom clone for all your video conferencing needs!
 **Project Inspiration** - Clone of ["Full Stack Video Conferencing App"](https://www.youtube.com/watch?v=R8CIO1DZ2b8&t=307s) by [JavaScript Mastery](https://www.youtube.com/@javascriptmastery)
 
 ## Image Gallery
-![Home](https://i.imgur.com/2SU0RsM.png)
-![Sign-In](https://i.imgur.com/CbLyGrL.png)
-![Schedule](https://i.imgur.com/1YW1NDu.png)
-![Setup](https://i.imgur.com/34VNsMm.png)
-![Call](https://i.imgur.com/kwpT1ZY.png)
+![Home](https://i.imgur.com/2SU0RsM.png)<br>
+![Sign-In](https://i.imgur.com/CbLyGrL.png)<br>
+![Schedule](https://i.imgur.com/1YW1NDu.png)<br>
+![Setup](https://i.imgur.com/34VNsMm.png)<br>
+![Call](https://i.imgur.com/kwpT1ZY.png)<br>
+---
