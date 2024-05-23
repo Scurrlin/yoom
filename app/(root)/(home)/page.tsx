@@ -1,23 +1,35 @@
+import { useEffect, useState } from 'react';
 import MeetingTypeList from '@/components/MeetingTypeList';
 
 const Home = () => {
-  // Get the current date and time in the user's local time zone
-  const now = new Date();
+  const [time, setTime] = useState('');
+  const [date, setDate] = useState('');
 
-  // Get the user's local time zone
-  const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  useEffect(() => {
+    const now = new Date();
 
-  // Format the time and date in the user's local time zone
-  const time = now.toLocaleTimeString('en-US', { 
-    hour: '2-digit', 
-    minute: '2-digit',
-    timeZone: timeZone // Explicitly set the local time zone
-  });
+    // Detect the user's local time zone
+    const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
-  const date = (new Intl.DateTimeFormat('en-US', { 
-    dateStyle: 'full',
-    timeZone: timeZone // Explicitly set the local time zone
-  })).format(now);
+    // Format the time and date in the user's local time zone
+    const formattedTime = now.toLocaleTimeString('en-US', {
+      hour: '2-digit',
+      minute: '2-digit',
+      timeZone: timeZone, // Explicitly set the time zone
+    });
+
+    const formattedDate = new Intl.DateTimeFormat('en-US', {
+      dateStyle: 'full',
+      timeZone: timeZone, // Explicitly set the time zone
+    }).format(now);
+
+    setTime(formattedTime);
+    setDate(formattedDate);
+
+    // Log the time zone and current time for debugging (remove this in production)
+    console.log(`Detected Time Zone: ${timeZone}`);
+    console.log(`Current Local Time: ${formattedTime}`);
+  }, []);
 
   return (
     <section className="flex size-full flex-col gap-5 text-white">
