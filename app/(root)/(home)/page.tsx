@@ -1,10 +1,28 @@
+import { useState, useEffect } from 'react';
 import MeetingTypeList from '@/components/MeetingTypeList';
 
 const Home = () => {
-  const now = new Date();
+  const [time, setTime] = useState('');
+  const [date, setDate] = useState('');
 
-  const time = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
-  const date = (new Intl.DateTimeFormat('en-US', { dateStyle: 'full' })).format(now);
+  useEffect(() => {
+    const fetchDateTime = async () => {
+      try {
+        const response = await fetch('https://worldtimeapi.org/api/ip');
+        const data = await response.json();
+        const userTimezone = data.timezone;
+        const now = new Date(new Date().toLocaleString('en-US', { timeZone: userTimezone }));
+        const time = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+        const date = (new Intl.DateTimeFormat('en-US', { dateStyle: 'full' })).format(now);
+        setTime(time);
+        setDate(date);
+      } catch (error) {
+        console.error('Error fetching user timezone:', error);
+      }
+    };
+
+    fetchDateTime();
+  }, []);
 
   return (
     <section className="flex size-full flex-col gap-5 text-white">
