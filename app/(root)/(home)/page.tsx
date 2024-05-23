@@ -1,10 +1,20 @@
 import MeetingTypeList from '@/components/MeetingTypeList';
 
 const Home = () => {
+  // Get the current date and time in the user's local time zone
   const now = new Date();
 
-  const time = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
-  const date = (new Intl.DateTimeFormat('en-US', { dateStyle: 'full' })).format(now);
+  // Format the time and date in the user's local time zone
+  const time = now.toLocaleTimeString('en-US', { 
+    hour: '2-digit', 
+    minute: '2-digit',
+    timeZoneName: 'short' // Adds the time zone abbreviation
+  });
+
+  const date = (new Intl.DateTimeFormat('en-US', { 
+    dateStyle: 'full',
+    timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone // Ensure it uses the local time zone
+  })).format(now);
 
   return (
     <section className="flex size-full flex-col gap-5 text-white">
