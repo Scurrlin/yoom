@@ -1,3 +1,5 @@
+"use cleint"
+
 import { useState, useEffect } from 'react';
 import MeetingTypeList from '@/components/MeetingTypeList';
 
