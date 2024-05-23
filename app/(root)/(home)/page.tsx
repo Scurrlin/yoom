@@ -3,8 +3,10 @@ import MeetingTypeList from '@/components/MeetingTypeList';
 const Home = () => {
   const now = new Date();
 
+  // Get the timezone from the environment variable or default to 'America/New_York'
   const timeZone = process.env.TIMEZONE || 'America/New_York';
 
+  // Format the time and date in the specified timezone
   const time = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', timeZone });
   const date = (new Intl.DateTimeFormat('en-US', { dateStyle: 'full', timeZone })).format(now);
 
@@ -16,9 +18,8 @@ const Home = () => {
             Upcoming Meeting at: 12:30 PM
           </h2>
           <div className="flex flex-col gap-2">
-            <h1 className="text-4xl font-extrabold lg:text-7xl">{time}</h1>
+            <h1 className="text-4xl font-extrabold lg:text-7xl">{time} EST</h1>
             <p className="text-lg font-medium text-sky-1 lg:text-2xl">{date}</p>
-            <p className="text-lg font-medium text-sky-1 lg:text-xl">EST</p>
           </div>
         </div>
       </div>
