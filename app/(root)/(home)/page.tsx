@@ -3,7 +3,7 @@ import MeetingTypeList from '@/components/MeetingTypeList';
 const Home = () => {
   const now = new Date();
 
-  const timeZone = process.env.TZ || 'America/New_York';
+  const timeZone = 'America/New_York';
 
   const time = now.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', timeZone });
   const date = (new Intl.DateTimeFormat('en-US', { dateStyle: 'full', timeZone })).format(now);
