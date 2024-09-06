@@ -9,7 +9,6 @@ A professional-grade Zoom clone for all your video conferencing needs!
 ## Technologies Used
 * Next.js
 * TypeScript
-* React
 * Clerk
 * Getstream.io
 * Tailwind CSS
