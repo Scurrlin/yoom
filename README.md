@@ -7,7 +7,7 @@ A professional-grade Zoom clone for all your video conferencing needs!
 [Yoom](https://yoom-yoom.vercel.app/)
 
 ## Technologies Used
-* Next.js
+* NextJS
 * TypeScript
 * Clerk
 * Getstream.io
