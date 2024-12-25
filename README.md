@@ -3,9 +3,6 @@ A professional-grade Zoom clone for all your video conferencing needs!
 
 ![banner_image](https://i.imgur.com/ZqjBL1z.png)
 
-## Check It Out!
-[Yoom](https://yoom-yoom.vercel.app/)
-
 ## Technologies Used
 * NextJS
 * TypeScript
